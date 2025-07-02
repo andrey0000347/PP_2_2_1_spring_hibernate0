@@ -25,10 +25,6 @@ public class MainApp {
       userService.add(new User("User2", "Lastname2", "user2@mail.ru"), car2);
       userService.add(new User("User3", "Lastname3", "user3@mail.ru"), car3);
 
-      // Добавление тестового автомобиля
-      Car tesla = new Car(2021, "Tesla Model S");
-      userService.add(new User("Tesla User", "Lastname4", "user4@mail.ru"), tesla);
-
       // Получение и вывод списка пользователей
       List<User> users = userService.listUsers();
       for (User user : users) {
@@ -37,9 +33,7 @@ public class MainApp {
          System.out.println("Last Name = " + user.getLastName());
          System.out.println("Email = " + user.getEmail());
          System.out.println();
-
-
-      }
+     }
 
       context.close();
    }
